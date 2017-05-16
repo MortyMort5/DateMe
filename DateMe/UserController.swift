@@ -16,7 +16,7 @@ class UserController {
     var currentUser: User?
     
     func fetchUsersInfoFromFacebook(completion: @escaping() -> Void) {
-        let parameters = ["fields": "gender, age_range, email, first_name, last_name, picture.type(large)"]
+        let parameters = ["fields": "id, gender, age_range, email, first_name, last_name, picture.type(large)"]
         FBSDKGraphRequest.init(graphPath: "me", parameters: parameters).start { (connection, result, error) in
             if let error = error {
                 print("Error fetching User from Facebook: \(error.localizedDescription)")

@@ -15,11 +15,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var ageLabel: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
     @IBOutlet weak var firstNameLabel: UILabel!
-    @IBOutlet weak var profileImageView: UIButton!
-    
-    @IBAction func profileImageButtonTapped(_ sender: Any) {
-        
-    }
+    @IBOutlet weak var profileImageView: UIImageView!
+
     
     var currentUser: User? {
         didSet {
@@ -39,6 +36,7 @@ class ProfileViewController: UIViewController {
         ageLabel.text = "\(user.age)"
         lastNameLabel.text = user.lastName
         firstNameLabel.text = user.firstName
+        profileImageView.image = user.profileImage
     }
     
 }

@@ -50,14 +50,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhj-Zq-LUq">
-                                <rect key="frame" x="118" y="99" width="138" height="125"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="profileImageButtonTapped:" destination="btf-xo-mTm" eventType="touchUpInside" id="4oP-rf-Jqm"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="firstname" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W68-Ry-sTN">
                                 <rect key="frame" x="111" y="288" width="72" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,6 +85,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8wb-jB-cjQ">
+                                <rect key="frame" x="107" y="93" width="160" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -102,7 +98,7 @@
                         <outlet property="firstNameLabel" destination="W68-Ry-sTN" id="KwE-kD-rcO"/>
                         <outlet property="genderLabel" destination="3fa-ib-QXs" id="Lqz-lj-fVn"/>
                         <outlet property="lastNameLabel" destination="o1R-6Y-pwp" id="4Ou-it-126"/>
-                        <outlet property="profileImageView" destination="jhj-Zq-LUq" id="2IZ-E0-WFc"/>
+                        <outlet property="profileImageView" destination="8wb-jB-cjQ" id="ReZ-UZ-0TY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhw-aU-nci" userLabel="First Responder" sceneMemberID="firstResponder"/>
