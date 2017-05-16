@@ -26,7 +26,8 @@ class NetworkController {
                                completion: ((Data?, Error?) -> Void)? = nil) {
         
         // Build our entire URL
-        let requestURL = self.url(byAdding: nil, to: url)
+        
+        let requestURL = url
         var request = URLRequest(url: requestURL)
         request.httpMethod = httpMethod.rawValue
         request.httpBody = body

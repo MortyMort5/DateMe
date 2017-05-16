@@ -70,6 +70,9 @@ class ConnectionViewController: UIViewController, DraggableViewDelegate {
         self.performSegue(withIdentifier: "toProfileSegue", sender: self)
     }
     
+    @IBAction func chatButtonTapped(_ sender: Any) {
+    }
+    
     //==============================================================
     // MARK: - Draggable Cards Functions
     //==============================================================

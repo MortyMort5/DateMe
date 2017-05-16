@@ -14,6 +14,8 @@ class UserController {
     static let shared = UserController()
     let cloudKitManager = CloudKitManager()
     var currentUser: User?
+    var passedByUsers: [User] = []
+    var connectedUsers: [User] = []
     
     func fetchUsersInfoFromFacebook(completion: @escaping() -> Void) {
         let parameters = ["fields": "id, gender, age_range, email, first_name, last_name, picture.type(large)"]
@@ -28,9 +30,7 @@ class UserController {
             guard let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else { return }
             guard let user = json.flatMap({ User(jsonDictionary: $0) }) else { return }
             self.currentUser = user
-            self.saveUser(user: user, completion: { 
-                completion()
-            })
+            completion()
         }
     }
     

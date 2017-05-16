@@ -20,7 +20,7 @@ class User: Equatable {
     var passedByConnections: [CKReference] = []
     var acceptedConnections: [CKReference] = []
     var profileImageData: Data?
-    let appleDefaultUserRef: CKReference?
+    var appleDefaultUserRef: CKReference?
     var userRecordID: CKRecordID?
     
     var temporaryPhotoURL: URL? {

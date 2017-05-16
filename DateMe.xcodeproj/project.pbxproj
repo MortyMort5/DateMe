@@ -27,7 +27,23 @@
 		818316521EC3AB3A00BBFF61 /* DraggableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818316511EC3AB3A00BBFF61 /* DraggableView.swift */; };
 		818316541EC3AB4800BBFF61 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818316531EC3AB4800BBFF61 /* OverlayView.swift */; };
 		818316561EC3AB9000BBFF61 /* ConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818316551EC3AB9000BBFF61 /* ConnectionViewController.swift */; };
+		81A14A6D1ECB6B5D002E4950 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A6C1ECB6B5D002E4950 /* ChatViewController.swift */; };
+		81A14A6F1ECB6DF6002E4950 /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A6E1ECB6DF6002E4950 /* ChatTableViewCell.swift */; };
+		81A14A711ECB6E08002E4950 /* ChatCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A701ECB6E08002E4950 /* ChatCollectionViewCell.swift */; };
+		81A14A731ECB7686002E4950 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A721ECB7686002E4950 /* ChatController.swift */; };
+		81A14A751ECB7691002E4950 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A741ECB7691002E4950 /* MessageController.swift */; };
+		81A14A801ECB7B4C002E4950 /* DateMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A7F1ECB7B4C002E4950 /* DateMeTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		81A14A821ECB7B4C002E4950 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 818316271EC3AA8700BBFF61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8183162E1EC3AA8700BBFF61;
+			remoteInfo = DateMe;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8131283E1EC3C6090015F73F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +70,14 @@
 		818316531EC3AB4800BBFF61 /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 		818316551EC3AB9000BBFF61 /* ConnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionViewController.swift; sourceTree = "<group>"; };
 		8183165B1EC3AC2300BBFF61 /* DateMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DateMe-Bridging-Header.h"; sourceTree = "<group>"; };
+		81A14A6C1ECB6B5D002E4950 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		81A14A6E1ECB6DF6002E4950 /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		81A14A701ECB6E08002E4950 /* ChatCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatCollectionViewCell.swift; sourceTree = "<group>"; };
+		81A14A721ECB7686002E4950 /* ChatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		81A14A741ECB7691002E4950 /* MessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		81A14A7D1ECB7B4C002E4950 /* DateMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		81A14A7F1ECB7B4C002E4950 /* DateMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMeTests.swift; sourceTree = "<group>"; };
+		81A14A811ECB7B4C002E4950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +88,13 @@
 				8173D20F1EC3D5570036D71D /* CloudKit.framework in Frameworks */,
 				8173D2121EC3E05F0036D71D /* FBSDKCoreKit.framework in Frameworks */,
 				8173D2131EC3E05F0036D71D /* FBSDKLoginKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A14A7A1ECB7B4C002E4950 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				818316311EC3AA8700BBFF61 /* DateMe */,
+				81A14A7E1ECB7B4C002E4950 /* DateMeTests */,
 				818316301EC3AA8700BBFF61 /* Products */,
 				818316451EC3AA9700BBFF61 /* Frameworks */,
 			);
@@ -101,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				8183162F1EC3AA8700BBFF61 /* DateMe.app */,
+				81A14A7D1ECB7B4C002E4950 /* DateMeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -166,6 +199,8 @@
 			isa = PBXGroup;
 			children = (
 				8173D2181EC4CF880036D71D /* UserController.swift */,
+				81A14A721ECB7686002E4950 /* ChatController.swift */,
+				81A14A741ECB7691002E4950 /* MessageController.swift */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -176,6 +211,7 @@
 				8131283E1EC3C6090015F73F /* LoginViewController.swift */,
 				818316551EC3AB9000BBFF61 /* ConnectionViewController.swift */,
 				815F7A341ECA5DA90064E95C /* ProfileViewController.swift */,
+				81A14A6C1ECB6B5D002E4950 /* ChatViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -183,6 +219,8 @@
 		8183164D1EC3AAC300BBFF61 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81A14A6E1ECB6DF6002E4950 /* ChatTableViewCell.swift */,
+				81A14A701ECB6E08002E4950 /* ChatCollectionViewCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -194,6 +232,15 @@
 				818316361EC3AA8700BBFF61 /* Main.storyboard */,
 			);
 			name = Storyboards;
+			sourceTree = "<group>";
+		};
+		81A14A7E1ECB7B4C002E4950 /* DateMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				81A14A7F1ECB7B4C002E4950 /* DateMeTests.swift */,
+				81A14A811ECB7B4C002E4950 /* Info.plist */,
+			);
+			path = DateMeTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +262,24 @@
 			productName = DateMe;
 			productReference = 8183162F1EC3AA8700BBFF61 /* DateMe.app */;
 			productType = "com.apple.product-type.application";
+		};
+		81A14A7C1ECB7B4C002E4950 /* DateMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 81A14A841ECB7B4C002E4950 /* Build configuration list for PBXNativeTarget "DateMeTests" */;
+			buildPhases = (
+				81A14A791ECB7B4C002E4950 /* Sources */,
+				81A14A7A1ECB7B4C002E4950 /* Frameworks */,
+				81A14A7B1ECB7B4C002E4950 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				81A14A831ECB7B4C002E4950 /* PBXTargetDependency */,
+			);
+			name = DateMeTests;
+			productName = DateMeTests;
+			productReference = 81A14A7D1ECB7B4C002E4950 /* DateMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -243,6 +308,12 @@
 							};
 						};
 					};
+					81A14A7C1ECB7B4C002E4950 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 5H73PY6T7Z;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8183162E1EC3AA8700BBFF61;
+					};
 				};
 			};
 			buildConfigurationList = 8183162A1EC3AA8700BBFF61 /* Build configuration list for PBXProject "DateMe" */;
@@ -259,6 +330,7 @@
 			projectRoot = "";
 			targets = (
 				8183162E1EC3AA8700BBFF61 /* DateMe */,
+				81A14A7C1ECB7B4C002E4950 /* DateMeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -274,6 +346,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		81A14A7B1ECB7B4C002E4950 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -281,24 +360,45 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81A14A711ECB6E08002E4950 /* ChatCollectionViewCell.swift in Sources */,
 				8131283F1EC3C6090015F73F /* LoginViewController.swift in Sources */,
 				8173D2211EC4DBC10036D71D /* CloudKitManager.swift in Sources */,
 				818316521EC3AB3A00BBFF61 /* DraggableView.swift in Sources */,
 				8173D2191EC4CF880036D71D /* UserController.swift in Sources */,
 				8173D21D1EC4D9780036D71D /* Chat.swift in Sources */,
+				81A14A6F1ECB6DF6002E4950 /* ChatTableViewCell.swift in Sources */,
 				8173D21B1EC4D8D20036D71D /* Message.swift in Sources */,
 				815F7A311ECA3A3D0064E95C /* ImageController.swift in Sources */,
+				81A14A751ECB7691002E4950 /* MessageController.swift in Sources */,
 				818316541EC3AB4800BBFF61 /* OverlayView.swift in Sources */,
 				818316561EC3AB9000BBFF61 /* ConnectionViewController.swift in Sources */,
 				818316331EC3AA8700BBFF61 /* AppDelegate.swift in Sources */,
 				8173D2151EC4CE8F0036D71D /* User.swift in Sources */,
 				815F7A351ECA5DA90064E95C /* ProfileViewController.swift in Sources */,
 				815F7A331ECA3C690064E95C /* NetworkController.swift in Sources */,
+				81A14A6D1ECB6B5D002E4950 /* ChatViewController.swift in Sources */,
 				8173D2231EC4DBEE0036D71D /* Constants.swift in Sources */,
+				81A14A731ECB7686002E4950 /* ChatController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		81A14A791ECB7B4C002E4950 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				81A14A801ECB7B4C002E4950 /* DateMeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		81A14A831ECB7B4C002E4950 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8183162E1EC3AA8700BBFF61 /* DateMe */;
+			targetProxy = 81A14A821ECB7B4C002E4950 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		818316361EC3AA8700BBFF61 /* Main.storyboard */ = {
@@ -464,6 +564,34 @@
 			};
 			name = Release;
 		};
+		81A14A851ECB7B4C002E4950 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5H73PY6T7Z;
+				INFOPLIST_FILE = DateMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SterlingMortensen.DateMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DateMe.app/DateMe";
+			};
+			name = Debug;
+		};
+		81A14A861ECB7B4C002E4950 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 5H73PY6T7Z;
+				INFOPLIST_FILE = DateMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.SterlingMortensen.DateMeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DateMe.app/DateMe";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -484,6 +612,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		81A14A841ECB7B4C002E4950 /* Build configuration list for PBXNativeTarget "DateMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				81A14A851ECB7B4C002E4950 /* Debug */,
+				81A14A861ECB7B4C002E4950 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

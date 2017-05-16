@@ -24,6 +24,8 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         view.addSubview(loginButton)
         
         if let _ = FBSDKAccessToken.current() {
+            self.performSegue(withIdentifier: "toConnectionView", sender: self)
+        } else {
             UserController.shared.fetchUsersInfoFromFacebook {
                 self.performSegue(withIdentifier: "toConnectionView", sender: self)
             }
@@ -32,9 +34,6 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         print("Completed Login")
-        UserController.shared.fetchUsersInfoFromFacebook {
-            self.performSegue(withIdentifier: "toConnectionView", sender: self)
-        }
     }
     
     func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
