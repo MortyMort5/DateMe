@@ -17,13 +17,14 @@ class User: Equatable {
     let email: String
     let gender: String
     let chats: [Chat]
-    var passedByConnections: [CKReference] = []
-    var acceptedConnections: [CKReference] = []
+    let connections: [Connection]
+    var friends: [CKReference] = []
+    var blockedUsers: [CKReference] = []
     var profileImageData: Data?
     var appleDefaultUserRef: CKReference?
     var userRecordID: CKRecordID?
     
-    var temporaryPhotoURL: URL? {
+    var profilePhotoURL: URL? {
         let tempDir = NSTemporaryDirectory()
         let tempURL = URL(fileURLWithPath: tempDir)
         let fileURL = tempURL.appendingPathComponent(UUID().uuidString).appendingPathExtension("png")
@@ -38,13 +39,14 @@ class User: Equatable {
         return image
     }
     
-    init(firstName: String, lastName: String, age: Int, email: String, gender: String, chats: [Chat] = [], profileImageData: Data, appleDefaultUserRef: CKReference) {
+    init(firstName: String, lastName: String, age: Int, email: String, gender: String, chats: [Chat] = [], connections: [Connection], profileImageData: Data, appleDefaultUserRef: CKReference) {
         self.firstName =  firstName
         self.lastName = lastName
         self.age = age
         self.email = email
         self.gender = gender
         self.chats = chats
+        self.connections = connections
         self.profileImageData = profileImageData
         self.appleDefaultUserRef = appleDefaultUserRef
     }
@@ -54,6 +56,8 @@ class User: Equatable {
             let lastName = record[Constants.lastNameKey] as? String,
             let age = record[Constants.ageKey] as? Int,
             let email = record[Constants.emailKey] as? String,
+            let friends = record[Constants.connectionsKey] as? [CKReference],
+            let blockedUsers = record[Constants.blockedUsersKey] as? [CKReference],
             let gender = record[Constants.genderKey] as? String,
             let photoAsset = record[Constants.profileImageDataKey] as? CKAsset,
             let appleDefaultUserRef = record[Constants.appleDefaultUserRefKey] as? CKReference else { return nil }
@@ -67,6 +71,9 @@ class User: Equatable {
         self.profileImageData = imageData
         self.appleDefaultUserRef = appleDefaultUserRef
         self.chats = []
+        self.connections = []
+        self.friends = friends
+        self.blockedUsers = blockedUsers
         self.userRecordID = record.recordID
     }
     
@@ -88,6 +95,7 @@ class User: Equatable {
         self.appleDefaultUserRef = nil
         self.userRecordID = nil
         self.chats = []
+        self.connections = []
         ImageController.image(forURL: photoURL) { (image) in
             guard let image = image,
             let data = UIImageJPEGRepresentation(image, 1.0) else { return }
@@ -104,8 +112,9 @@ extension CKRecord {
         self.setValue(user.lastName, forKey: Constants.lastNameKey)
         self.setValue(user.age, forKey: Constants.ageKey)
         self.setValue(user.email, forKey: Constants.emailKey)
+        self.setValue(user.connections, forKey: Constants.connectionsKey)
         self.setValue(user.gender, forKey: Constants.genderKey)
-        guard let photoURL = user.temporaryPhotoURL else { return }
+        guard let photoURL = user.profilePhotoURL else { return }
         let imageAsset = CKAsset(fileURL: photoURL)
         self.setValue(imageAsset, forKey: Constants.profileImageDataKey)
         self.setValue(user.appleDefaultUserRef, forKey: Constants.appleDefaultUserRefKey)

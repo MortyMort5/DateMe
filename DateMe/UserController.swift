@@ -49,4 +49,32 @@ class UserController {
             completion()
         }
     }
+    
+    func passedByOtherUser(user: User, completion: @escaping() -> Void) {
+        
+        //When you pass by someone that has the app you connect
+        
+    }
+    
+    func sendConnectRequest(user: User, completion: @escaping() -> Void) {
+        
+        //When you have aleady passed each other and you click like on that person but they have not yet liked you
+        
+    }
+    
+    func connected(user: User, completion: @escaping() -> Void) {
+        
+        //When both have liked each other and are now able to chat
+        
+    }
+    
+    func blockUser(user: User, completion: @escaping() -> Void) {
+        
+        //Add user to blockedUsers array
+        
+    }
+    
+    
+    
+    
 }

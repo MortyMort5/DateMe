@@ -33,6 +33,7 @@
 		81A14A731ECB7686002E4950 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A721ECB7686002E4950 /* ChatController.swift */; };
 		81A14A751ECB7691002E4950 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A741ECB7691002E4950 /* MessageController.swift */; };
 		81A14A801ECB7B4C002E4950 /* DateMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A7F1ECB7B4C002E4950 /* DateMeTests.swift */; };
+		81A14A8A1ECBA855002E4950 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A891ECBA855002E4950 /* Connection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +79,7 @@
 		81A14A7D1ECB7B4C002E4950 /* DateMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DateMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81A14A7F1ECB7B4C002E4950 /* DateMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMeTests.swift; sourceTree = "<group>"; };
 		81A14A811ECB7B4C002E4950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81A14A891ECBA855002E4950 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				8173D2141EC4CE8F0036D71D /* User.swift */,
 				8173D21A1EC4D8D20036D71D /* Message.swift */,
 				8173D21C1EC4D9780036D71D /* Chat.swift */,
+				81A14A891ECBA855002E4950 /* Connection.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -372,6 +375,7 @@
 				81A14A751ECB7691002E4950 /* MessageController.swift in Sources */,
 				818316541EC3AB4800BBFF61 /* OverlayView.swift in Sources */,
 				818316561EC3AB9000BBFF61 /* ConnectionViewController.swift in Sources */,
+				81A14A8A1ECBA855002E4950 /* Connection.swift in Sources */,
 				818316331EC3AA8700BBFF61 /* AppDelegate.swift in Sources */,
 				8173D2151EC4CE8F0036D71D /* User.swift in Sources */,
 				815F7A351ECA5DA90064E95C /* ProfileViewController.swift in Sources */,

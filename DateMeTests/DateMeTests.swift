@@ -42,7 +42,7 @@ class GenerateTableView: XCTestCase {
     func testCreatMocUsers() {
         let ID = CKRecordID(recordName: "User")
         let ref = CKReference(recordID: ID, action: .none)
-        let mocUsers: [User] = [
+        let _ : [User] = [
             User(firstName: "John", lastName: "Dart", age: 45, email: "example@dave.com", gender: "male", chats: [], profileImageData: Data(), appleDefaultUserRef: ref), User(firstName: "Sterling", lastName: "Tickit", age: 23, email: "example@da3ve.com", gender: "female", chats: [], profileImageData: Data(), appleDefaultUserRef: ref), User(firstName: "Black", lastName: "Sarah", age: 33, email: "example@dave.com", gender: "male", chats: [], profileImageData: Data(), appleDefaultUserRef: ref), User(firstName: "Genny", lastName: "Gustin", age: 12, email: "example@dave.com", gender: "Female", chats: [], profileImageData: Data(), appleDefaultUserRef: ref), User(firstName: "Sam", lastName: "Ward", age: 25, email: "example@dave.com", gender: "Female", chats: [], profileImageData: Data(), appleDefaultUserRef: ref)
         ]
     }

@@ -20,8 +20,9 @@ struct Constants {
     static let emailKey = "email"
     static let genderKey = "gender"
     static let chatsKey = "chats"
-    static let passedByConnectionsKey = "passedByConnections"
-    static let acceptedConnectionsKey = "acceptedConnections"
+    static let friendsKey = "friends"
+    static let blockedUsersKey = "blockedUsers"
+    static let connectionsKey = "connections"
     static let profileImageDataKey = "profileImageData"
     static let appleDefaultUserRefKey = "appleDefaultUserRef"
     static let photoURLKey = "url"
@@ -34,7 +35,7 @@ struct Constants {
     static let messageRecordTypeKey = "Message"
     static let ownerKey = "owner"
     static let textKey = "text"
-    static let timestampKey = "timestamp"
+    static let messageTimestampKey = "timestamp"
     static let isReadKey = "isRead"
     static let chatKey = "chat"
     static let messageRecordIDKey = "messageRecordID"
@@ -44,5 +45,15 @@ struct Constants {
     static let withWhomKey = "withWhom"
     static let messagesKey = "messages"
     static let chatRecordIDKey = "chatRecordID"
+    
+    // Connection
+    static let locationImageDataKey = "locationImageData"
+    static let countDownSinceConnectedKey = "countDownSinceConnected"
+    static let connectionTimestampKey = "timestamp"
+    static let userKey = "user"
+    static let passedByConnectionKey = "passedByConnection"
+    static let likedConnectionsKey = "likedConnections"
+    static let uuidKey = "uuid"
+    static let enabledKey = "enabled"
     
 }

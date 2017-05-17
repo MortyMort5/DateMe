@@ -29,7 +29,7 @@ class Message: Equatable {
     init?(record: CKRecord) {
         guard let owner = record[Constants.ownerKey] as? User,
             let text = record[Constants.textKey] as? String,
-            let timestamp = record[Constants.timestampKey] as? Date,
+            let timestamp = record[Constants.messageTimestampKey] as? Date,
             let isRead = record[Constants.isReadKey] as? Bool,
             let chat = record[Constants.chatKey] as? Chat else { return nil }
         self.owner = owner
@@ -47,7 +47,7 @@ extension CKRecord {
         self.init(recordType: Constants.messageRecordTypeKey, recordID: recordID)
         self.setValue(message.owner, forKey: Constants.ownerKey)
         self.setValue(message.text, forKey: Constants.textKey)
-        self.setValue(message.timestamp, forKey: Constants.timestampKey)
+        self.setValue(message.timestamp, forKey: Constants.messageTimestampKey)
         self.setValue(message.isRead, forKey: Constants.isReadKey)
         self.setValue(message.chat, forKey: Constants.chatKey)
     }
