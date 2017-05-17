@@ -15,6 +15,14 @@ class ConnectionController {
     
     var connections: [Connection] = []
     
+    
+    
+    
+    
+    
+    //==============================================================
+    // MARK: - Time Interval Functions
+    //==============================================================
     static private var persistentConnectionFilePath: String? {
         let directories = NSSearchPathForDirectoriesInDomains(.documentDirectory, .allDomainsMask, true)
         guard let documentsDirectory = directories.first as NSString? else { return nil }
@@ -34,12 +42,12 @@ class ConnectionController {
     }
 }
 
-protocol AlarmScheduler {
+protocol DisconnectScheduler {
     func scheduleLocalNotification(for connection: Connection)
     func cancelLocalNotification(for connection: Connection)
 }
 
-extension AlarmScheduler {
+extension DisconnectScheduler {
     func scheduleLocalNotification(for connection: Connection) {
         print("lslsls")
         let notificationContent = UNMutableNotificationContent()

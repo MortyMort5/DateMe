@@ -23,12 +23,17 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
         loginButton.delegate = self
         view.addSubview(loginButton)
         
-        if let _ = FBSDKAccessToken.current() {
-            self.performSegue(withIdentifier: "toConnectionView", sender: self)
-        } else {
+        if FBSDKAccessToken.current() == nil {
             UserController.shared.fetchUsersInfoFromFacebook {
-                self.performSegue(withIdentifier: "toConnectionView", sender: self)
+                self.performSegue(withIdentifier: Constants.toConnectionViewKey, sender: self)
             }
+        }
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if FBSDKAccessToken.current() != nil {
+            self.performSegue(withIdentifier: Constants.toConnectionViewKey, sender: self)
         }
     }
     
@@ -43,5 +48,4 @@ class LoginViewController: UIViewController, FBSDKLoginButtonDelegate {
     func loginButtonWillLogin(_ loginButton: FBSDKLoginButton!) -> Bool {
         return true
     }
-    
 }

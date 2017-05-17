@@ -8,13 +8,17 @@
 
 import UIKit
 import Foundation
+import MapKit
+import CoreLocation
 
-class ConnectionViewController: UIViewController, DraggableViewDelegate {
+class ConnectionViewController: UIViewController, DraggableViewDelegate, MapKitViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         exampleCardLabels = ["first", "second", "third", "fourth", "last"]
         self.loadCards()
+        self.view.sendSubview(toBack: mapContainerView)
+        mapContainerView.isHidden = true
     }
     
     //==============================================================
@@ -32,6 +36,8 @@ class ConnectionViewController: UIViewController, DraggableViewDelegate {
     // MARK: - IBOutlets
     //==============================================================
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var enableConnectionSwitch: UISwitch!
+    @IBOutlet weak var mapContainerView: UIView!
     
     //==============================================================
     // MARK: - IBActions
@@ -63,14 +69,19 @@ class ConnectionViewController: UIViewController, DraggableViewDelegate {
     }
     
     @IBAction func locationButtonTapped(_ sender: Any) {
-        
+        self.view.bringSubview(toFront: mapContainerView)
+        mapContainerView.isHidden = false
     }
     
     @IBAction func profileButtonTapped(_ sender: Any) {
-        self.performSegue(withIdentifier: "toProfileSegue", sender: self)
+        self.performSegue(withIdentifier: Constants.toProfileViewKey, sender: self)
     }
     
     @IBAction func chatButtonTapped(_ sender: Any) {
+    }
+    
+    @IBAction func enableConnectionSwitch(_ sender: Any) {
+        
     }
     
     //==============================================================
@@ -124,6 +135,28 @@ class ConnectionViewController: UIViewController, DraggableViewDelegate {
             cardView.insertSubview(loadedCards[MAX_BUFFER_SIZE - 1], belowSubview: loadedCards[MAX_BUFFER_SIZE - 2])
         }
     }
+    
+    //==============================================================
+    // MARK: - UI View Functions
+    //==============================================================
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.toMapViewKey {
+            let embedViewController = segue.destination as? MapKitViewController
+            embedViewController?.delegate = self
+        }
+    }
+    
+    func styleSwitch() {
+
+        //Style the switch on the connection Controller
+        
+    }
+    
+    func mapKitViewControllerSelector(_ viewController: MapKitViewController) {
+        self.view.sendSubview(toBack: mapContainerView)
+        mapContainerView.isHidden = true
+    } 
+    
 }
 
 

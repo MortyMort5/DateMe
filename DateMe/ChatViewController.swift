@@ -40,7 +40,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "chatCell", for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: Constants.chatTableViewCellKey, for: indexPath) as? ChatTableViewCell else { return UITableViewCell() }
         
         
         return cell
@@ -64,7 +64,7 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "matchCell", for: indexPath) as? ChatCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.chatCollectionViewCellKey, for: indexPath) as? ChatCollectionViewCell else { return UICollectionViewCell() }
         
         return cell
     }

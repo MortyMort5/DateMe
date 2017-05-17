@@ -22,13 +22,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Esn-qT-hL5">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Esn-qT-hL5">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.030991971489999999" green="0.49511897560000001" blue="0.56859117749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Esn-qT-hL5" secondAttribute="trailing" id="Dkw-0r-Rv9"/>
+                            <constraint firstItem="kWt-n4-LJW" firstAttribute="top" secondItem="Esn-qT-hL5" secondAttribute="bottom" id="cTU-Ju-RLm"/>
+                            <constraint firstItem="Esn-qT-hL5" firstAttribute="top" secondItem="SgP-a7-XZJ" secondAttribute="top" id="gSx-AR-xof"/>
+                            <constraint firstItem="Esn-qT-hL5" firstAttribute="leading" secondItem="SgP-a7-XZJ" secondAttribute="leading" id="hSn-Rr-u4I"/>
+                        </constraints>
                     </view>
                     <connections>
                         <segue destination="QWZ-F3-Api" kind="show" identifier="toConnectionView" id="vgf-xf-JMN"/>
@@ -111,7 +116,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hhw-aU-nci" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1404" y="-479.01049475262374"/>
+            <point key="canvasLocation" x="2278" y="-466"/>
         </scene>
         <!--Connection View Controller-->
         <scene sceneID="35V-4D-lca">
@@ -178,7 +183,17 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V5N-LD-SKf">
                                 <rect key="frame" x="163" y="23" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="enableConnectionSwitch:" destination="9J5-DD-9od" eventType="valueChanged" id="FNB-L9-chv"/>
+                                </connections>
                             </switch>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2An-So-mbd">
+                                <rect key="frame" x="0.0" y="323" width="375" height="344"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="Zr6-cp-STv" kind="embed" identifier="toMapViewSegue" id="QzI-9B-iN8"/>
+                                </connections>
+                            </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -189,6 +204,8 @@
                     <navigationItem key="navigationItem" id="0Tn-uh-9ko"/>
                     <connections>
                         <outlet property="cardView" destination="Wmw-zO-3Ke" id="em2-vJ-sex"/>
+                        <outlet property="enableConnectionSwitch" destination="V5N-LD-SKf" id="a9T-95-s3Y"/>
+                        <outlet property="mapContainerView" destination="2An-So-mbd" id="asc-ua-Nce"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BHT-1p-wa1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -324,6 +341,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Dg-Rv-t6w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="517.60000000000002" y="210.94452773613196"/>
+        </scene>
+        <!--Map Kit View Controller-->
+        <scene sceneID="fko-lg-jG4">
+            <objects>
+                <viewController storyboardIdentifier="MapKitViewController" id="Zr6-cp-STv" customClass="MapKitViewController" customModule="DateMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="t7A-La-5Da">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="344"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="eLY-Ys-xf0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="353"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o44-DU-Gs8">
+                                <rect key="frame" x="334" y="20" width="25" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="DontLikeButton"/>
+                                <connections>
+                                    <action selector="dismissMapViewButtonTapped:" destination="Zr6-cp-STv" eventType="touchUpInside" id="5tc-gB-u2S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="locationMapView" destination="t7A-La-5Da" id="JtL-Dv-1dS"/>
+                        <outlet property="mapView" destination="eLY-Ys-xf0" id="K2Y-ru-vaK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hpt-Ar-Nvi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1404" y="807.34632683658174"/>
         </scene>
     </scenes>
     <resources>

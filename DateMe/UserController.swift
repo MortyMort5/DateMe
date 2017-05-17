@@ -30,7 +30,9 @@ class UserController {
             guard let json = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) as? [String: Any] else { return }
             guard let user = json.flatMap({ User(jsonDictionary: $0) }) else { return }
             self.currentUser = user
-            completion()
+            self.saveUser(user: user, completion: { 
+                completion()
+            })
         }
     }
     

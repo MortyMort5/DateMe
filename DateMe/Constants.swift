@@ -10,6 +10,15 @@ import Foundation
 
 struct Constants {
     
+    // Segues
+    static let toConnectionViewKey = "toConnectionView"
+    static let toProfileViewKey = "toProfileSegue"
+    static let toMapViewKey = "toMapViewSegue"
+    
+    // Cell Identifiers
+    static let chatTableViewCellKey = "chatCell"
+    static let chatCollectionViewCellKey = "matchCell"
+    
     // User
     static let userRecordTypeKey = "User"
     static let firstNameKey = "first_name"

@@ -36,6 +36,8 @@
 		81A14A8A1ECBA855002E4950 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A891ECBA855002E4950 /* Connection.swift */; };
 		81A14A8C1ECCC392002E4950 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A8B1ECCC392002E4950 /* DateHelper.swift */; };
 		81A14A8E1ECCC545002E4950 /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A8D1ECCC545002E4950 /* ConnectionController.swift */; };
+		81A14A901ECCD9AA002E4950 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A8F1ECCD9AA002E4950 /* MapKitViewController.swift */; };
+		81A14A921ECCE046002E4950 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81A14A911ECCE046002E4950 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		81A14A891ECBA855002E4950 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		81A14A8B1ECCC392002E4950 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		81A14A8D1ECCC545002E4950 /* ConnectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
+		81A14A8F1ECCD9AA002E4950 /* MapKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		81A14A911ECCE046002E4950 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +97,7 @@
 			files = (
 				8173D20F1EC3D5570036D71D /* CloudKit.framework in Frameworks */,
 				8173D2121EC3E05F0036D71D /* FBSDKCoreKit.framework in Frameworks */,
+				81A14A921ECCE046002E4950 /* MapKit.framework in Frameworks */,
 				8173D2131EC3E05F0036D71D /* FBSDKLoginKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,6 +171,7 @@
 		818316451EC3AA9700BBFF61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				81A14A911ECCE046002E4950 /* MapKit.framework */,
 				8173D2101EC3E05F0036D71D /* FBSDKCoreKit.framework */,
 				8173D2111EC3E05F0036D71D /* FBSDKLoginKit.framework */,
 				8173D20E1EC3D5570036D71D /* CloudKit.framework */,
@@ -219,6 +225,7 @@
 			children = (
 				8131283E1EC3C6090015F73F /* LoginViewController.swift */,
 				818316551EC3AB9000BBFF61 /* ConnectionViewController.swift */,
+				81A14A8F1ECCD9AA002E4950 /* MapKitViewController.swift */,
 				815F7A341ECA5DA90064E95C /* ProfileViewController.swift */,
 				81A14A6C1ECB6B5D002E4950 /* ChatViewController.swift */,
 			);
@@ -309,6 +316,9 @@
 							com.apple.Keychain = {
 								enabled = 1;
 							};
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -370,6 +380,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81A14A711ECB6E08002E4950 /* ChatCollectionViewCell.swift in Sources */,
+				81A14A901ECCD9AA002E4950 /* MapKitViewController.swift in Sources */,
 				8131283F1EC3C6090015F73F /* LoginViewController.swift in Sources */,
 				8173D2211EC4DBC10036D71D /* CloudKitManager.swift in Sources */,
 				818316521EC3AB3A00BBFF61 /* DraggableView.swift in Sources */,
