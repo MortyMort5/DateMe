@@ -32,7 +32,8 @@ extension CKRecord {
     convenience init(chat: Chat) {
         let recordID = chat.cloudKitRecordID ?? CKRecordID(recordName: UUID().uuidString)
         self.init(recordType: Constants.chatRecordTypeKey, recordID: recordID)
-        self.setValue(chat.withWhom, forKey: Constants.withWhomKey)
+        guard let user = chat.withWhom else { print("There is no relation between this Chat and a User"); return }
+        self.setValue(user.userRecordID, forKey: Constants.withWhomKey)
     }
 }
 

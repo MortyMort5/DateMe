@@ -34,6 +34,8 @@
 		81A14A751ECB7691002E4950 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A741ECB7691002E4950 /* MessageController.swift */; };
 		81A14A801ECB7B4C002E4950 /* DateMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A7F1ECB7B4C002E4950 /* DateMeTests.swift */; };
 		81A14A8A1ECBA855002E4950 /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A891ECBA855002E4950 /* Connection.swift */; };
+		81A14A8C1ECCC392002E4950 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A8B1ECCC392002E4950 /* DateHelper.swift */; };
+		81A14A8E1ECCC545002E4950 /* ConnectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81A14A8D1ECCC545002E4950 /* ConnectionController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		81A14A7F1ECB7B4C002E4950 /* DateMeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateMeTests.swift; sourceTree = "<group>"; };
 		81A14A811ECB7B4C002E4950 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81A14A891ECBA855002E4950 /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
+		81A14A8B1ECCC392002E4950 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		81A14A8D1ECCC545002E4950 /* ConnectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				8173D2221EC4DBEE0036D71D /* Constants.swift */,
+				81A14A8B1ECCC392002E4950 /* DateHelper.swift */,
 			);
 			name = "Helper Files";
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				8173D2181EC4CF880036D71D /* UserController.swift */,
 				81A14A721ECB7686002E4950 /* ChatController.swift */,
 				81A14A741ECB7691002E4950 /* MessageController.swift */,
+				81A14A8D1ECCC545002E4950 /* ConnectionController.swift */,
 			);
 			name = "Model Controllers";
 			sourceTree = "<group>";
@@ -370,11 +376,13 @@
 				8173D2191EC4CF880036D71D /* UserController.swift in Sources */,
 				8173D21D1EC4D9780036D71D /* Chat.swift in Sources */,
 				81A14A6F1ECB6DF6002E4950 /* ChatTableViewCell.swift in Sources */,
+				81A14A8E1ECCC545002E4950 /* ConnectionController.swift in Sources */,
 				8173D21B1EC4D8D20036D71D /* Message.swift in Sources */,
 				815F7A311ECA3A3D0064E95C /* ImageController.swift in Sources */,
 				81A14A751ECB7691002E4950 /* MessageController.swift in Sources */,
 				818316541EC3AB4800BBFF61 /* OverlayView.swift in Sources */,
 				818316561EC3AB9000BBFF61 /* ConnectionViewController.swift in Sources */,
+				81A14A8C1ECCC392002E4950 /* DateHelper.swift in Sources */,
 				81A14A8A1ECBA855002E4950 /* Connection.swift in Sources */,
 				818316331EC3AA8700BBFF61 /* AppDelegate.swift in Sources */,
 				8173D2151EC4CE8F0036D71D /* User.swift in Sources */,

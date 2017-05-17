@@ -55,5 +55,7 @@ struct Constants {
     static let likedConnectionsKey = "likedConnections"
     static let uuidKey = "uuid"
     static let enabledKey = "enabled"
+    static let connectionRecordIDKey = "recordID"
+    static let connectionTypeKey = "Connection"
     
 }
