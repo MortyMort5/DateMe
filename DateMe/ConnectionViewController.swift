@@ -11,7 +11,7 @@ import Foundation
 import MapKit
 import CoreLocation
 
-class ConnectionViewController: UIViewController, DraggableViewDelegate, MapKitViewControllerDelegate {
+class ConnectionViewController: UIViewController, DraggableViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -78,6 +78,7 @@ class ConnectionViewController: UIViewController, DraggableViewDelegate, MapKitV
     }
     
     @IBAction func chatButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func enableConnectionSwitch(_ sender: Any) {
@@ -151,15 +152,14 @@ class ConnectionViewController: UIViewController, DraggableViewDelegate, MapKitV
         //Style the switch on the connection Controller
         
     }
-    
+}
+
+extension ConnectionViewController: MapKitViewControllerDelegate {
     func mapKitViewControllerSelector(_ viewController: MapKitViewController) {
         self.view.sendSubview(toBack: mapContainerView)
         mapContainerView.isHidden = true
-    } 
-    
+    }
 }
-
-
 
 
 

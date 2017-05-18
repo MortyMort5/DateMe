@@ -40,8 +40,7 @@ class MapKitViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     // MARK: - IBActions
     //==============================================================
     @IBAction func dismissMapViewButtonTapped(_ sender: Any) {
-        print("dismiss button")
-        locationManager.stopUpdatingLocation()
+        //locationManager.stopUpdatingLocation()
         delegate?.mapKitViewControllerSelector(self)
     }
     
